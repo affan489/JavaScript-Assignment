@@ -1,0 +1,8 @@
+// Create an array of numbers.
+const numbers = [3, 10, 4, 21, 5, 9, 2, 6, 5, 3, 5];
+
+// Sort the array in descending order using the reverse() method.
+numbers.sort().reverse();
+
+// Print the sorted array to the console.
+console.log(numbers);

@@ -1,0 +1,41 @@
+// Function to reverse a word
+function reverseWord(word) {
+  // Convert the word to an array of characters
+  var characters = word.split('');
+  
+  // Reverse the order of the characters in the array
+  var reversedCharacters = characters.reverse();
+  
+  // Convert the array of characters back to a string
+  var reversedWord = reversedCharacters.join('');
+  
+  // Return the reversed word
+  return reversedWord;
+}
+
+// Function to reverse every word in a sentence
+function reverseSentence(sentence) {
+  // Split the sentence into an array of words
+  var words = sentence.split(' ');
+  
+  // Iterate through each word in the array
+  for (var i = 0; i < words.length; i++) {
+    // Reverse the current word using the reverseWord function
+    words[i] = reverseWord(words[i]);
+  }
+  
+  // Convert the array of words back to a string
+  var reversedSentence = words.join(' ');
+  
+  // Return the reversed sentence
+  return reversedSentence;
+}
+
+// Prompt the user to enter a sentence
+var sentence = prompt("Enter a sentence:");
+
+// Call the reverseSentence function to reverse every word in the sentence
+var reversedSentence = reverseSentence(sentence);
+
+// Print the reversed sentence
+console.log(reversedSentence);
